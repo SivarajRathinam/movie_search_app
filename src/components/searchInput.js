@@ -1,5 +1,6 @@
 import React from 'react';
 import Suggestions from './suggestions';
+import '../styles/suggestion.css';
 
 class SearchInput extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class SearchInput extends React.Component {
 
     return (
     	<div className={"searchContainer"}>
-      		<input type="text" value={value} onChange={this.handleChange.bind(this)} autocomplete={false} className="autoSuggestInput"></input>
+      		<input type="text" value={value} placeholder="Type Movie Name" onChange={this.handleChange.bind(this)} autoComplete="false" className="autoSuggestInput"></input>
       		<Suggestions inputValue={value}/>
       	</div>
     );
