@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchInput from './components/searchInput';
 import MovieDetails from './components/movieDetails';
+import './styles/general.css';
 
 class App extends React.Component{
 	constructor(props){

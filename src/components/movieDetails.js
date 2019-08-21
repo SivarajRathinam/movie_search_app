@@ -32,7 +32,7 @@ class MovieDetails extends React.Component{
 				<div className="movieGenere"><b>Genere</b> : {movieDetails.Genre}</div>
 				<div className="movieWriter"><b>Writer :</b> {movieDetails.Writer}</div>
 				<div className="movieRuntime"><b>Movie Runtime</b> : {movieDetails.Runtime}</div>
-				<img src={movieDetails.Poster}/>
+				<div className="moviePoster"><img src={movieDetails.Poster}/></div>
 			</>)
 		}
 		return null
