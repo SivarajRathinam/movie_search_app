@@ -7,26 +7,29 @@ class SearchInput extends React.Component {
     super(props);
     this.state = {
       value: '',
-      suggestions: []
+      suggestionText:''
     };
   }
 
-  onChange = (event, { newValue }) => {
-    this.setState({
-      value: newValue
-    });
-  };
-  handleChange(event){
-  	let value = event.target.value
-  	this.setState({value});
+  handleInputChange(event){
+		const value = event.target.value
+		clearTimeout(this.timerObj)
+		this.timerObj = setTimeout(() => {
+			this.handleChange(value)
+			clearTimeout(this.timerObj)
+		}, 500)
+		this.setState({value})
+	}
+  handleChange(suggestionText){
+		this.setState({suggestionText})
   }
   render() {
-    const { value, suggestions } = this.state;
+    const { value, suggestionText } = this.state;
 
     return (
     	<div className={"searchContainer"}>
-      		<input type="text" value={value} placeholder="Type Movie Name" onChange={this.handleChange.bind(this)} autoComplete="false" className="autoSuggestInput"></input>
-      		<Suggestions inputValue={value}/>
+      		<input type="text" value={value} placeholder="Type Movie Name" onChange={this.handleInputChange.bind(this)} autoComplete="false" className="autoSuggestInput"></input>
+      		<Suggestions inputValue={suggestionText} handleClick={this.props.handleSuggestionClick}/>
       	</div>
     );
   }

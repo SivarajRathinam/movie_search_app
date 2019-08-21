@@ -7,7 +7,7 @@
 .autoSuggestInput {
     width: 100%;
     border: 1px solid #e0e0e0;
-    padding: 5px;
+    padding: 10px;
 }
 
 .searchContainer ul{
@@ -17,6 +17,7 @@
     width: 100%;
     position: absolute;
     border: 1px solid #e0e0e0;
+    background: white;
 }
 .searchContainer li{
 	overflow: hidden;

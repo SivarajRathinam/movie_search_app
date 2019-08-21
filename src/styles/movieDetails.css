@@ -1,0 +1,11 @@
+.movieContainer{
+	padding: 20px;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.movieTitle{
+	font-size: 20px;
+	text-align: center;
+}
